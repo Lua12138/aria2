@@ -10,6 +10,6 @@ RUN apt-get update && \
     make -j4 && \
     make install && \
     cd .. && \
-    rm -rf ./aria2 && \
+    rm -rf ./aria2
  
  CMD ["aria2c","--conf-path=/etc/aria2.conf"]
