@@ -6,7 +6,7 @@ RUN apt-get update && \
     cd aria2 && \
     sed -i '443s/16/16386/' src/OptionHandlerFactory.cc && \
     autoreconf -i && \
-    ./configure --with-ca-bundle='/etc/ssl/certs/ca-certificates.crt' && \
+    ./configure --with-ca-bundle='/etc/ssl/certs/ca-certificates.crt' ARIA2_STATIC=yes && \
     make -j4 && \
     make install && \
     cd .. && \
